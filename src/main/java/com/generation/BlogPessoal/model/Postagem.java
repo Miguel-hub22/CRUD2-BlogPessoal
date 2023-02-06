@@ -39,45 +39,57 @@ public class Postagem {
 	   @ManyToOne
 	   @JsonIgnoreProperties("postagem")
 		private Tema tema;
-	   	   
-		public Long getId() {
-			return id;
-		}
+	   
+	   @ManyToOne
+	   @JsonIgnoreProperties("postagem")
+	   private Usuario usuario;
+	   /* insira o os getter and setters */
 
-		public void setId(Long id) {
-			this.id = id;
-		}
+	public Long getId() {
+		return id;
+	}
 
-		public String getTitulo() {
-			return titulo;
-		}
+	public void setId(Long id) {
+		this.id = id;
+	}
 
-		public void setTitulo(String titulo) {
-			this.titulo = titulo;
-		}
+	public String getTitulo() {
+		return titulo;
+	}
 
-		public String getTexto() {
-			return texto;
-		}
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
+	}
 
-		public void setTexto(String texto) {
-			this.texto = texto;
-		}
+	public String getTexto() {
+		return texto;
+	}
 
-		public LocalDateTime getData() {
-			return data;
-		}
+	public void setTexto(String texto) {
+		this.texto = texto;
+	}
 
-		public void setData(LocalDateTime data) {
-			this.data = data;
-		}
+	public LocalDateTime getData() {
+		return data;
+	}
 
-		public Tema getTema() {
-			return tema;
-		}
+	public void setData(LocalDateTime data) {
+		this.data = data;
+	}
 
-		public void setTema(Tema tema) {
-			this.tema = tema;
-		}
-		 
-}
+	public Tema getTema() {
+		return tema;
+	}
+
+	public void setTema(Tema tema) {
+		this.tema = tema;
+	}
+
+	public Usuario getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
+	}
+	}

@@ -50,7 +50,7 @@ public class TemaController {
     public ResponseEntity<List<Tema>> getByTitle(@PathVariable 
     String descricao){
         return ResponseEntity.ok(temaRepository
-            .findAllByDescricaoContainigIgnorecase(descricao));
+            .findAllByDescricaoContainingIgnoreCase(descricao));
     }
     
     @PostMapping
